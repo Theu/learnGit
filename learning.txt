@@ -1,0 +1,55 @@
+reactTutorial2310 learning:
+
+keep render() clean.
+a small logic can stay in render (
+render() {
+  myLogic
+}
+return(
+  my component
+  );
+//...
+
+BUT BETTER
+myChunckOfLogic
+render(){return(my component);}
+
+ )
+
+ class method
+
+ contructor method is always with super();
+
+======================================
+ class Layout extends React.Component {
+   render() {
+     const code = 'amazing'
+     return (
+       <h1>It is {code}! Isn't it?!</h1>
+     );
+   }
+ }
+
+ export default Layout;
+
+ IS THE SAME OF
+
+export default class Layout extends React.Component {
+   render() {
+     const code = 'amazing'
+     return (
+       <h1>It is {code}! Isn't it?!</h1>
+     );
+   }
+ }
+
+Personally I refer the second method, it is cleaner
+
+===============================================
+
+this.state is by default null
+
+
+===============================================
+
+state gets used only if a component has an internal value which affect only that component otherwise use props
